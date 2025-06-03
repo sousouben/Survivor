@@ -1,12 +1,19 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Flashlight, Volume2, VolumeX } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Flashlight, Volume2, VolumeX } from "lucide-react";
 
-const SOSControls = ({ sosActive, isFlashing, isSoundActive, startSOSFlash, startSOSSound, stopSOS }) => {
+const SOSControls = ({
+  sosActive,
+  isFlashing,
+  isSoundActive,
+  startSOSFlash,
+  startSOSSound,
+  stopSOS,
+}) => {
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 mb-6">
         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
           <Button
             onClick={startSOSFlash}
@@ -33,9 +40,9 @@ const SOSControls = ({ sosActive, isFlashing, isSoundActive, startSOSFlash, star
         </motion.div>
         */}
       </div>
-      
+
       {sosActive && (
-        <motion.div 
+        <motion.div
           className="mb-6"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
